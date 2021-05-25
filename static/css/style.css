@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+/*******************header-start***********************/
+header nav {
+  background-color: #e31616;
+  font-size: 1.2rem;
+}
+header nav .navbar-brand {
+  font-size: 1.6rem;
+}
+
+/********************header-end************************/
+/*******************home-card-start***********************/
+#home-cards .row .card {
+  min-height: 200px;
+}
+
+/********************home-card-end************************/
+
+/*# sourceMappingURL=style.css.map */
