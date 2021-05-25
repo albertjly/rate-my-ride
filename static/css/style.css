@@ -21,12 +21,12 @@ button {
 }
 
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /*******************header-start***********************/
 header nav {
-  background-color: #e31616;
+  background-color: #6f1120;
   font-size: 1.2rem;
 }
 header nav .navbar-brand {
@@ -40,5 +40,32 @@ header nav .navbar-brand {
 }
 
 /********************home-card-end************************/
+/********************carousel-start************************/
+#cars-carousel .container {
+  background-color: #6f1120;
+  border-radius: 20px;
+}
+#cars-carousel .container img {
+  height: 400px;
+}
+
+/*********************carousel-end*************************/
+/********************rmr-contents-start************************/
+#rmr-contents .container .row .left-filter .card .title {
+  color: #170462;
+  font-weight: bolder;
+}
+
+/*********************rmr-contents-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
 
 /*# sourceMappingURL=style.css.map */
