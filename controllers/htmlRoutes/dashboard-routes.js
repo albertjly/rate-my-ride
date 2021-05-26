@@ -15,7 +15,7 @@ router.get('/', withAuth, (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'car_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -29,7 +29,7 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbCarData => {
       const car = dbCarData.map(car => car.get({ plain: true }));
-      res.render('dashboard', { cars, loggedIn: true });
+      res.render('dashboard', { car, loggedIn: true });
     })
     .catch(err => {
       console.log(err);
@@ -43,7 +43,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'car_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -57,7 +57,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
   })
     .then(dbCarData => {
       if (dbCarData) {
-        const post = dbCarData.get({ plain: true });
+        const car = dbCarData.get({ plain: true });
         
         res.render('edit-car', {
           car,

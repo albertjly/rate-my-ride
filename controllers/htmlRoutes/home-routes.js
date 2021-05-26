@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'car_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
       const cars = dbCarData.map(car => car.get({ plain: true }));
 
       res.render('homepage', {
-        posts,
+        cars,
         loggedIn: req.session.loggedIn
       });
     })
@@ -47,7 +47,7 @@ router.get('/car/:id', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'car_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
