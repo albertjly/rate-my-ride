@@ -11,7 +11,7 @@ Car.init(
       primaryKey: true,
       autoIncrement: true
     },
-    image: {
+    imageUrl: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
