@@ -1,18 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Car } = require('../models');
+const { Car, User, Comment, } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('======================');
-  Post.findAll({
-    attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-    ],
+  Car.findAll({
+    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
     include: [
       {
         model: Comment,
@@ -28,8 +22,8 @@ router.get('/', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
+    .then(dbCarData => {
+      const cars = dbCarData.map(car => car.get({ plain: true }));
 
       res.render('homepage', {
         posts,
@@ -43,18 +37,12 @@ router.get('/', (req, res) => {
 });
 
 // get single post
-router.get('/post/:id', (req, res) => {
-  Post.findOne({
+router.get('/car/:id', (req, res) => {
+  Car.findOne({
     where: {
       id: req.params.id
     },
-    attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-    ],
+    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
     include: [
       {
         model: Comment,
@@ -70,15 +58,15 @@ router.get('/post/:id', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
+    .then(dbCarData => {
+      if (!dbCarData) {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
 
-      const post = dbPostData.get({ plain: true });
+      const post = dbCarData.get({ plain: true });
 
-      res.render('single-post', {
+      res.render('single-car', {
         post,
         loggedIn: req.session.loggedIn
       });
