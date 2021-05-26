@@ -12,14 +12,15 @@
   "dependencies": {
     "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^6.1.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "express-session": "^1.17.0",
+    "express-session": "^1.17.2",
     "handlebars": "^4.7.3",
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
+    "node": "^16.1.0",
     "sequelize": "^5.22.4"
   },
   "repository": {
