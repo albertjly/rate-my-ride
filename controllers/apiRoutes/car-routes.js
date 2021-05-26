@@ -66,7 +66,6 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   Car.create({
-    title: req.body.title,
     make: req.body.make,
     model: req.body.model,
     year: req.body.year,
