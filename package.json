@@ -1,11 +1,10 @@
 {
   "name": "rate-my-ride",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .",
+    "start": "node",
     "seeds": "node seeds/index.js"
   },
   "author": "",
@@ -13,14 +12,25 @@
   "dependencies": {
     "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^6.1.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "express-session": "^1.17.0",
+    "express-session": "^1.17.2",
     "handlebars": "^4.7.3",
     "moment": "^2.29.1",
-    "mysql2": "^2.1.0",
-    "sequelize": "^5.21.5"
-  }
+    "mysql2": "^2.2.5",
+    "node": "^16.1.0",
+    "sequelize": "^5.22.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertjly/rate-my-ride.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/albertjly/rate-my-ride/issues"
+  },
+  "homepage": "https://github.com/albertjly/rate-my-ride#readme",
+  "description": ""
 }

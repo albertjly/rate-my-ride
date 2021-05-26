@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/*# sourceMappingURL=index.css.map */
