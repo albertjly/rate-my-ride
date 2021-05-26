@@ -7,7 +7,7 @@ const { Car, User, Comment, } = require('../models');
 router.get('/', (req, res) => {
   console.log('======================');
   Car.findAll({
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
     include: [
       {
         model: Comment,
@@ -43,7 +43,7 @@ router.get('/car/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
     include: [
       {
         model: Comment,

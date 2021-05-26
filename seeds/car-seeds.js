@@ -2,7 +2,7 @@ const { Car } = require('../models');
 
 const carData = [
   {
-    imageUrl: 'https://imgur.com/R4ipDfl',
+    image_url: 'https://imgur.com/R4ipDfl',
     make: 'Mazda',
     model: 'Miata',
     year: 1995,
@@ -11,7 +11,7 @@ const carData = [
     user_id: 5
   },
   {
-    imageUrl: 'https://imgur.com/RBpEKE7',
+    image_url: 'https://imgur.com/RBpEKE7',
     make: 'Fiat',
     model: 'Abarth 500',
     year: 2016,
@@ -20,7 +20,7 @@ const carData = [
     user_id: 3
   },
   {
-    imageUrl: 'https://imgur.com/ecOLqbA',
+    image_url: 'https://imgur.com/ecOLqbA',
     make: 'Hyundia',
     model: 'Veloster N',
     year: 2020,
@@ -29,7 +29,7 @@ const carData = [
     user_id: 2
   },
   {
-    imageUrl: 'https://imgur.com/sMXlppB',
+    image_url: 'https://imgur.com/sMXlppB',
     make: 'Volkswagen',
     model: 'GTI',
     year: 2017,
@@ -38,7 +38,7 @@ const carData = [
     user_id: 8
   },
   {
-    imageUrl: 'https://imgur.com/F5GcMVi',
+    image_url: 'https://imgur.com/F5GcMVi',
     make: 'Mazda',
     model: 'RX-7',
     year: 1993,
@@ -47,7 +47,7 @@ const carData = [
     user_id: 1
   },
   {
-    imageUrl: 'https://imgur.com/KmKvprJ',
+    image_url: 'https://imgur.com/KmKvprJ',
     make: 'Volkswagen',
     model: 'beetle',
     year: 1966,
