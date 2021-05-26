@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+/*******************header-start***********************/
+header nav {
+  background-color: #6f1120;
+  font-size: 1.2rem;
+}
+header nav .navbar-brand {
+  font-size: 1.6rem;
+}
+
+/********************header-end************************/
+/*******************home-card-start***********************/
+#home-cards .row .card {
+  min-height: 200px;
+}
+
+/********************home-card-end************************/
+/********************carousel-start************************/
+#cars-carousel .container {
+  background-color: #6f1120;
+  border-radius: 20px;
+}
+#cars-carousel .container img {
+  height: 400px;
+}
+
+/*********************carousel-end*************************/
+/********************rmr-contents-start************************/
+#rmr-contents .container .row .left-filter .card .title {
+  color: #170462;
+  font-weight: bolder;
+}
+
+/*********************rmr-contents-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+/********************carousel-start************************/
+/*********************carousel-end*************************/
+
+/*# sourceMappingURL=style.css.map */
