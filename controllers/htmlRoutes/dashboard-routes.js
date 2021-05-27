@@ -8,10 +8,7 @@ router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Car.findAll({
-    where: {
-      user_id: req.session.user_id
-    },
-    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at'],
+    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'created_at'],
     include: [
       {
         model: Comment,
@@ -29,7 +26,7 @@ router.get('/', (req, res) => {
   })
     .then(dbCarData => {
       const car = dbCarData.map(car => car.get({ plain: true }));
-      res.render('dashboard', { car, loggedIn: true });
+      res.render('dashboard');
     })
     .catch(err => {
       console.log(err);
@@ -39,9 +36,7 @@ router.get('/', (req, res) => {
 
 router.get('/edit/:id', (req, res) => {
   Car.findByPk(req.params.id, {
-
-    attributes: [ 'id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
-
+    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'created_at'],
     include: [
       {
         model: Comment,
