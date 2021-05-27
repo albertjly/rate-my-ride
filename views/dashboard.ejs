@@ -1,3 +1,125 @@
-<%- include ('partials/head'); -%>
+<%- include ('partials/html-head'); -%>
+  <%- include ('partials/header-nav'); -%>
 
-  <h1>Here is dashboard!</h1>
+    <section id="rmr-contents" class="mt-4">
+      <div class="container">
+        <div class="row flex-md-column flex-lg-row">
+          <div class="left-filter col col-lg-3">
+            <div class="card">
+              <article class="card-group-item">
+                <header class="card-header">
+                  <h6 class="title">Brands </h6>
+                </header>
+                <div class="filter-content">
+                  <div class="card-body">
+                    <form>
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">Mersedes Benz</span>
+                      </label>
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">Nissan Altima</span>
+                      </label>
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">Another Brand</span>
+                      </label>
+                    </form>
+
+                  </div>
+                </div>
+              </article>
+              <article class="card-group-item">
+                <header class="card-header">
+                  <h6 class="title">Choose type </h6>
+                </header>
+                <div class="filter-content">
+                  <div class="card-body">
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        First hand items
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Brand new items
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Some other option
+                      </span>
+                    </label>
+                  </div> <!-- card-body.// -->
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="right-contents col col-lg-9 g-0">
+            <div class="card mb-3">
+              <div class="row g-0 justify-content-between p-1">
+                <div class="col-md-4 image">
+                  <img src="./images/Fiat-Coupe-2022.jpg" alt="...">
+                </div>
+                <article class="col-md-8">
+                  <div class="card-body-top g-0 row justify-content-center flex-column">
+                    <div class="card-title g-0 p-2 col d-flex justify-content-between">
+                      <b class="card-title-username">Username</b>
+                      <b class="card-title-created-at">05/20/2021</b>
+                    </div>
+                    <div class="car-detail col row">
+                      <ul class="col-4">
+                        <li class="make">Make: Volkswagen</li>
+                        <li class="model">Model: LT 40</li>
+                        <li class="year">Year: 1978</li>
+                        <li class="color">Color: custom</li>
+                      </ul>
+                      <div class="description col-8">
+                        <b>Description:</b>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores ducimus, eius
+                          est
+                          illum ipsum nam
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="comment-div p-2 m-1 mb-2">
+                    <p class="comment">Comment 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis,
+                      dolore.
+                    </p>
+                    <div class="d-flex justify-content-between">
+                      <span class="username">Albert Jiang</span>
+                      <span class="created-at">Last updated 3 mins ago</span>
+                    </div>
+                  </div>
+                  <div class="comment-div p-2 m-1 mb-2">
+                    <p class="comment">Comment 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis,
+                      dolore.
+                    </p>
+                    <div class="d-flex justify-content-between">
+                      <span class="username">Albert Jiang</span>
+                      <span class="created-at">Last updated 3 mins ago</span>
+                    </div>
+                  </div>
+                  <div class="comment-div p-2 m-1 mb-2">
+                    <p class="comment">Comment 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis,
+                      dolore.
+                    </p>
+                    <div class="d-flex justify-content-between">
+                      <span class="username">Albert Jiang</span>
+                      <span class="created-at">Last updated 3 mins ago</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
