@@ -33,20 +33,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Log out</a>
                     </li>
-                    <!--
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                    -->
-
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -58,7 +44,7 @@
 </header>
 
 <section class="container">
-    <form>
+    <form action="/post">
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Post Title:</label>
             <div class="col-sm-10">
@@ -71,31 +57,23 @@
                 <textarea class="form-control" rows="5" placeholder="Please describe your car!"></textarea>
             </div>
         </div>
-        <fieldset class="form-group">
-            <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Make:</legend>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            Ford
-                        </label>
+        <div class="form-group row">
+            <label class="col-sm-2" for="makeSelect">Make:</label>
+            <div class="col-sm-10">
+                <form>
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2" id="makeSelect">
+                                <option selected>Choose the make</option>
+                                <option value="ford">Ford</option>
+                                <option value="dodge">Dodge</option>
+                                <option value="chevrolet">Chevrolet</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            Dodge
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                        <label class="form-check-label" for="gridRadios3">
-                            Chevrolet
-                        </label>
-                    </div>
-                </div>
+                </form>
             </div>
-        </fieldset>
+        </div>
         <div class="form-group row">
             <label class="col-sm-2" for="modelSelect">Model:</label>
             <div class="col-sm-10">
