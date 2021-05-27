@@ -4,7 +4,7 @@ const { Car, User, Comment, } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all posts for dashboard
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Car.findAll({
@@ -37,9 +37,11 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', (req, res) => {
   Car.findByPk(req.params.id, {
+
     attributes: [ 'id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+
     include: [
       {
         model: Comment,
@@ -58,7 +60,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .then(dbCarData => {
       if (dbCarData) {
         const car = dbCarData.get({ plain: true });
-        
+
         res.render('edit-car', {
           car,
           loggedIn: true
