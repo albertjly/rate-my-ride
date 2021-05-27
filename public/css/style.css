@@ -30,7 +30,7 @@ header {
 
 /*******************header-start***********************/
 header nav {
-  background-color: #b51c1c;
+  background-color: #7e1010;
   font-size: 1.2rem;
 }
 header nav .navbar-brand {
@@ -41,12 +41,13 @@ header nav .navbar-brand {
 /*******************home-card-start***********************/
 #home-cards .row .card {
   min-height: 200px;
+  border: 1px solid #e6e6e6;
 }
 
 /********************home-card-end************************/
 /********************carousel-start************************/
 #cars-carousel .container {
-  background-color: #b51c1c;
+  background-color: #7e1010;
   border-radius: 20px;
 }
 #cars-carousel .container img {
@@ -55,28 +56,49 @@ header nav .navbar-brand {
 
 /*********************carousel-end*************************/
 /********************rmr-contents-start************************/
+#rmr-contents .container .row .left-filter .card {
+  border: 1px solid #cccccc;
+}
 #rmr-contents .container .row .left-filter .card .title {
   font-weight: bolder;
 }
-#rmr-contents .container .row .right-contents {
-  border: 1px solid #b3b3b3;
+#rmr-contents .container .row .right-contents .card {
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
+  background-color: #F5F5F6;
 }
 #rmr-contents .container .row .right-contents .card .row .image {
-  width: 300px;
+  width: 320px;
   overflow: hidden;
 }
 #rmr-contents .container .row .right-contents .card .row .image img {
-  height: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 320px;
+}
+#rmr-contents .container .row .right-contents .card .row article {
+  overflow: hidden;
 }
 #rmr-contents .container .row .right-contents .card .row article .card-body-top .card-title {
   background-color: #891515;
   font-size: 1.2rem;
   color: #e6e6e6;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment {
-  border: 1px solid #000;
+#rmr-contents .container .row .right-contents .card .row article .comment-div {
+  border: 1px solid #cccccc;
   border-radius: 5px;
+  background-color: #e6e6e6;
+  font-size: 0.8rem;
+  box-shadow: 0 0 1px #e44e67;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-div p {
+  margin-bottom: 0.5rem;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-div .username {
+  color: #891515;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-div .created-at {
+  color: #999999;
 }
 
 /*********************rmr-contents-end*************************/
