@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     where: {
       user_id: req.session.user_id
     },
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at'],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at'],
     include: [
       {
         model: Comment,
@@ -39,7 +39,9 @@ router.get('/', (req, res) => {
 
 router.get('/edit/:id', (req, res) => {
   Car.findByPk(req.params.id, {
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at'],
+
+    attributes: [ 'id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+
     include: [
       {
         model: Comment,

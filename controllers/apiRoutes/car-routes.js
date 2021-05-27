@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
   console.log('======================');
   Car.findAll({
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
     include: [
       {
         model: Comment,
@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
     include: [
       {
         model: Comment,
@@ -66,6 +66,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   Car.create({
+    image_url: req.body.image_url,
     make: req.body.make,
     model: req.body.model,
     year: req.body.year,
