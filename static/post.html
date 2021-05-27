@@ -46,83 +46,39 @@
 <section class="container">
     <form action="/post">
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Post Title:</label>
+            <label class="col-sm-2 col-form-label">Image Url:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Post title">
+                <input type="text" class="form-control" placeholder="url" name="car-image">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Make:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="" name="car-make">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Model:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="" name="car-model">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Year:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="" name="car-year">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Color:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="" name="car-color">
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Car Description:</label>
             <div class="form col-sm-10">
-                <textarea class="form-control" rows="5" placeholder="Please describe your car!"></textarea>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2" for="makeSelect">Make:</label>
-            <div class="col-sm-10">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="makeSelect">
-                                <option selected>Choose the make</option>
-                                <option value="ford">Ford</option>
-                                <option value="dodge">Dodge</option>
-                                <option value="chevrolet">Chevrolet</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2" for="modelSelect">Model:</label>
-            <div class="col-sm-10">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="modelSelect">
-                                <option selected>Choose the model</option>
-                                <option value="camaro">CAMARO</option>
-                                <option value="corvette">CORVETTE</option>
-                                <option value="motorsports">MOTORSPORTS</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2" for="inlineFormCustomSelect">Year:</label>
-            <div class="col-sm-10">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose the year</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2" for="colorSelect">Color:</label>
-            <div class="col-sm-10">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="colorSelect">
-                                <option selected>Choose the color</option>
-                                <option value="red">red</option>
-                                <option value="blue">blue</option>
-                                <option value="green">green</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
+                <textarea name="car-description" class="form-control" rows="5" placeholder="Please describe your car!"></textarea>
             </div>
         </div>
         <div class="form-group row">
