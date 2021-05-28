@@ -33,20 +33,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Log out</a>
                     </li>
-                    <!--
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                    -->
-
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -57,62 +43,75 @@
     </nav>
 </header>
 
-<section style="height: 400px">
+<section class="account">
     <div class="container">
-        <div class="login_img" style="float: left;">
-            <img src="./images/wallhaven-g8llqq.jpg" alt="" style="height: 400px">
-        </div>
-        <div class="login-form" style="float: right">
-            <form method="post">
-                <h2 class="text-center">Log in</h2>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
-                </div>
-                <div class="clearfix">
-                    <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-                    <a href="#" class="float-right">Forgot Password?</a>
-                </div>
-            </form>
-            <p class="text-center"><a href="#">Create an Account</a></p>
+        <div class="login row justify-content-between">
+            <div class="login_img col-lg-8 d-none d-md-none d-lg-block">
+                <img src="./images/wallhaven-g8llqq.jpg" alt="">
+            </div>
+            <div class="login-form col-lg-4">
+                <form method="post">
+                    <h2 class="text-center">Log in</h2>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="login-panel">
+                            <label class="">
+                                <input type="checkbox">
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="">Log in</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-center mt-2"><a href="/signup">Create an Account</a></p>
+            </div>
         </div>
     </div>
 </section>
-<section style="height: 400px; margin-top: 20px">
+<section class="account">
     <div class="container">
-        <div class="login_img" style="float: left;">
-            <img src="./images/Fiat-Coupe-2022.jpg" alt="" style="height: 400px">
-        </div>
-        <div class="login-form" style="float: right">
-            <form method="post">
-                <h2 class="text-center">Sign up</h2>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="" placeholder="username">
-                    <label for="floatingInput">Username</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-                </div>
-                <div class="clearfix">
-                    <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-                </div>
-            </form>
-            <p class="text-center"><a href="#">Switch to login</a></p>
+        <div class="signup row justify-content-between">
+            <div class="signup_img col-lg-8 d-none d-md-none d-lg-block">
+                <img src="./images/Fiat-Coupe-2022.jpg" alt="">
+            </div>
+            <div class="signup-form col-lg-4">
+                <form method="post">
+                    <h2 class="text-center">Sign up</h2>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingUsername" placeholder="username">
+                        <label for="floatingUsername">Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="login-panel">
+                            <label class="">
+                                <input type="checkbox">
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="">Sign up</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-center"><a href="/login">Switch to login</a></p>
+            </div>
         </div>
     </div>
 </section>

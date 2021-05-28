@@ -24,6 +24,22 @@ button {
   border: none;
 }
 
+button {
+  outline: none;
+  border: none;
+  display: inline-block;
+  color: #e6e6e6;
+  background-color: #891515;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.6vh;
+}
+button:active {
+  background-color: #b51c1c;
+}
+button:focus {
+  box-shadow: 0 0 2px 3px #f5c1c1;
+}
+
 header {
   margin-bottom: 1rem;
 }
@@ -100,12 +116,80 @@ header nav .navbar-brand {
 #rmr-contents .container .row .right-contents .card .row article .comment-div .created-at {
   color: #999999;
 }
+#rmr-contents .container .row .right-contents .card .row article .comment-form {
+  margin-top: 0.8rem;
+  height: 2.5rem;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-form .col-9 {
+  margin-left: 1rem;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-form input {
+  background-color: #fefbfb;
+  height: 100%;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-form input:focus {
+  border: 1px solid #fce9ec;
+  box-shadow: 0 0 2px 3px #f5c1c1;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-form button {
+  color: #e6e6e6;
+  background-color: #891515;
+  margin-left: 1rem;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-form button:active {
+  background-color: #b51c1c;
+}
+#rmr-contents .container .row .right-contents .card .row article .comment-form button:focus {
+  box-shadow: 0 0 2px 3px #f5c1c1;
+}
 
 /*********************rmr-contents-end*************************/
-/********************carousel-start************************/
-/*********************carousel-end*************************/
-/********************carousel-start************************/
-/*********************carousel-end*************************/
+/********************car-post-start************************/
+#car-post .form-group {
+  margin-bottom: 0.35rem;
+}
+#car-post .form-group input, #car-post .form-group textarea {
+  background-color: #fefbfb;
+}
+#car-post .form-group input:focus, #car-post .form-group textarea:focus {
+  border: 1px solid #fce9ec;
+  box-shadow: 0 0 2px 3px #f5c1c1;
+}
+#car-post .form-group label {
+  font-weight: bold;
+  color: #731212;
+}
+#car-post .form-group button {
+  color: #e6e6e6;
+  background-color: #891515;
+}
+#car-post .form-group button:active {
+  background-color: #b51c1c;
+}
+#car-post .form-group button:focus {
+  box-shadow: 0 0 2px 3px #f5c1c1;
+}
+#car-post .car-detail-right .form-group {
+  height: 100%;
+}
+#car-post .car-detail-right .form-group textarea {
+  height: 97%;
+}
+
+/*********************car-post-end*************************/
+/********************account-start************************/
+.account .container input, .account .container textarea {
+  background-color: #fefbfb;
+}
+.account .container input:focus, .account .container textarea:focus {
+  border: 1px solid #fce9ec;
+  box-shadow: 0 0 2px 3px #f5c1c1;
+}
+.account .container .login img, .account .container .signup img {
+  height: 400px;
+}
+
+/*********************account-end*************************/
 /********************carousel-start************************/
 /*********************carousel-end*************************/
 /********************carousel-start************************/
