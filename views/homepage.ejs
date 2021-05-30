@@ -36,62 +36,62 @@
   <section class="container" id="home-cards">
     <div class="row justify-content-center align-content-center">
       <div class="card col-auto col-lg-5 m-3 m-xl-4">
-        <img src="./images/Fiat-Coupe-2022.jpg" class="card-img-top mt-2" alt="...">
+        <img src="<%- cars[0].image_url %>" class="card-img-top mt-2" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Car-make-model-year-color</h5>
-          <p class="card-text">Car description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <h5 class="card-title"><%= cars[0].user.username %>'s <%= cars[0].year %> <%= cars[0].make %> <%= cars[0].model %>  </h5>
+          <p class="card-text"><%= cars[0].description %></p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <a href="#">Comment 1</a>
+            <a href="/car/<%- cars[0].id %> "><%= cars[0].comments[0].comment_text %> - <%= cars[0].comments[0].user.username %>  </a>
           </li>
           <li class="list-group-item">
-            <a href="#">Comment 2</a>
+            <a href="#"><%= cars[0].comments[1].comment_text %> - <%= cars[0].comments[1].user.username %>  </a>
           </li>
         </ul>
       </div>
       <div class="card col-auto col-lg-5 m-3 m-xl-4">
-        <img src="./images/1995_miata_front_quarter.jpg" class="card-img-top mt-2" alt="...">
+        <img src="<%- cars[1].image_url %>" class="card-img-top mt-2" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Car-make-model-year-color</h5>
-          <p class="card-text">Car description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <h5 class="card-title"><%= cars[1].user.username %>'s <%= cars[1].year %> <%= cars[1].make %> <%= cars[1].model %>  </h5>
+          <p class="card-text"><%= cars[1].description %></p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <a href="#">Comment 1</a>
+            <a href="#"><%= cars[1].comments[0].comment_text %> - <%= cars[1].comments[0].user.username %></a>
           </li>
           <li class="list-group-item">
-            <a href="#">Comment 2</a>
+            <a href="#"><%= cars[1].comments[1].comment_text %> - <%= cars[1].comments[1].user.username %></a>
           </li>
         </ul>
       </div>
       <div class="card col-auto col-lg-5 m-3 m-xl-4">
-        <img src="./images/wallhaven-g8llqq.jpg" class="card-img-top mt-2" alt="...">
+        <img src="<%- cars[2].image_url %>" class="card-img-top mt-2" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Car-make-model-year-color</h5>
-          <p class="card-text">Car description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <h5 class="card-title"><%= cars[2].user.username %>'s <%= cars[2].year %> <%= cars[2].make %> <%= cars[2].model %>  </h5>
+          <p class="card-text"><%= cars[2].description %></p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <a href="#">Comment 1</a>
+            <a href="#"><%= cars[2].comments[0].comment_text %> - <%= cars[2].comments[0].user.username %></a>
           </li>
           <li class="list-group-item">
-            <a href="#">Comment 2</a>
+            <a href="#"><%= cars[2].comments[1].comment_text %> - <%= cars[2].comments[1].user.username %></a>
           </li>
         </ul>
       </div>
       <div class="card col-auto col-lg-5 m-3 m-xl-4">
-        <img src="./images/Volvo-Concept-Coupe-4-e1449487206877.jpg" class="card-img-top mt-2" alt="...">
+        <img src="<%- cars[3].image_url %>" class="card-img-top mt-2" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Car-make-model-year-color</h5>
-          <p class="card-text">Car description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <h5 class="card-title"><%= cars[3].user.username %>'s <%= cars[3].year %> <%= cars[3].make %> <%= cars[3].model %>  </h5>
+          <p class="card-text"><%= cars[3].description %></p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <a href="#">Comment 1</a>
+            <a href="#"><%= cars[3].comments[0].comment_text %> - <%= cars[3].comments[0].user.username %></a>
           </li>
           <li class="list-group-item">
-            <a href="#">Comment 2</a>
+            <a href="#"><%= cars[3].comments[1].comment_text %> - <%= cars[3].comments[1].user.username %></a>
           </li>
         </ul>
       </div>

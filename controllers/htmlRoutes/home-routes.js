@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
       const cars = dbCarData.map(car => car.get({ plain: true }));
 
       res.render('homepage', {
-        cars,
+        cars: cars,
         loggedIn: req.session.loggedIn
       });
     })
