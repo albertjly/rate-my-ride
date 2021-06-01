@@ -51,18 +51,19 @@ https://rate-my-riide.herokuapp.com/
 
 - UI update
 
-  - Add a logo as favicon
+  - Add a logo for a favicon
   - Add description videos/images link (Instagram, Tiktok, Facebook)
   - Build dropdown list to show multiple comments
   - Each user can add more than one vehicle
 
 - Rating system
 
-  - Allow other users rate cars
-  - Filter by rating stars
+  - Allow other users to rate cars
+  - Filter cars by their rating
 
 - Social Group
-  - User can tag friends on posts and comments
+
+  - User can tag friends on posts and in comments
   - User can create car groups with friends
 
 > ## **_Contributing_**
