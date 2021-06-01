@@ -56,7 +56,7 @@ router.get('/edit/:id', (req, res) => {
       if (dbCarData) {
         const car = dbCarData.get({ plain: true });
 
-        res.render('edit-car', {
+        res.render('edit-post', {
           car,
           loggedIn: true
         });
