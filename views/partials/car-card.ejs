@@ -1,0 +1,12 @@
+<div class="card col-auto col-lg-5 m-3 m-xl-4">
+  <img src="<%- car.image_url %>" class="card-img-top mt-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= car.user.username %>'s <%= car.year %> <%= car.make %> <%= car.model %>  </h5>
+    <p class="card-text"><%= car.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <% car.comments.forEach(comment => { %>
+      <%- include('card-comment.ejs', {comment: comment}) %> 
+    <% }); %> 
+  </ul>
+</div>
