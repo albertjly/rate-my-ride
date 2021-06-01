@@ -40,14 +40,6 @@ button:focus {
   box-shadow: 0 0 2px 3px #f5c1c1;
 }
 
-input, textarea {
-  background-color: #fefbfb;
-}
-input:focus, textarea:focus {
-  border: 1px solid #fce9ec;
-  box-shadow: 0 0 2px 3px #f5c1c1;
-}
-
 header {
   margin-bottom: 1rem;
 }
