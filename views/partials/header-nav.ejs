@@ -9,21 +9,21 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link <%= currentMenu === 'homepage' ? 'active' : '' %>" aria-current="page" href="/">Home</a>
+            <a class="nav-link <%- currentMenu === 'homepage' ? 'active' : '' %>" aria-current="page" href="/">Home</a>
           </li>
           <% if(loggedIn) {%>
             <li class="nav-item">
-              <a class="nav-link <%= currentMenu === 'dashboard' ? 'active' : '' %>" href="/dashboard">Dashboard</a>
+              <a class="nav-link <%- currentMenu === 'dashboard' ? 'active' : '' %>" href="/dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <%= currentMenu === 'post' ? 'active' : '' %>" href="/new-post">Post</a>
+              <a class="nav-link <%- currentMenu === 'post' ? 'active' : '' %>" href="/new-post">Post</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/logout">Log out</a>
             </li>
             <% } else { %>
               <li class="nav-item">
-                <a class="nav-link <%= currentMenu === 'login' || 'signup' ? 'active' : '' %>" href="/login">Login</a>
+                <a class="nav-link <%- currentMenu === 'login' || 'signup' ? 'active' : '' %>" href="/login">Login</a>
               </li>
               <% } %>
         </ul>
