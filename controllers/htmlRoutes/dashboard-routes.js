@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
   })
     .then(dbCarData => {
       const car = dbCarData.map(car => car.get({ plain: true }));
-      res.render('dashboard');
+      res.render('dashboard', { currentMenu: 'dashboard' });
     })
     .catch(err => {
       console.log(err);
