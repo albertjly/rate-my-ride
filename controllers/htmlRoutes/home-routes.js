@@ -28,7 +28,8 @@ router.get('/', (req, res) => {
 
       res.render('homepage', {
         cars: cars,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
+        currentMenu: 'homepage'
       });
     })
     .catch(err => {
