@@ -85,7 +85,10 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    currentMenu: 'login',
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get('/signup', (req, res) => {
@@ -94,7 +97,10 @@ router.get('/signup', (req, res) => {
     return;
   }
 
-  res.render('signup');
+  res.render('signup', {
+    currentMenu: 'signup',
+    loggedIn: req.session.loggedIn
+  });
 });
 
 module.exports = router;

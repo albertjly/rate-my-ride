@@ -26,7 +26,10 @@ router.get('/', (req, res) => {
   })
     .then(dbCarData => {
       const car = dbCarData.map(car => car.get({ plain: true }));
-      res.render('dashboard', { currentMenu: 'dashboard' });
+      res.render('dashboard', {
+        currentMenu: 'dashboard',
+        loggedIn: req.session.loggedIn
+      });
     })
     .catch(err => {
       console.log(err);
@@ -58,7 +61,8 @@ router.get('/edit/:id', (req, res) => {
 
         res.render('edit-post', {
           car,
-          loggedIn: true
+          loggedIn: true,
+          currentMenu: 'post'
         });
       } else {
         res.status(404).end();
