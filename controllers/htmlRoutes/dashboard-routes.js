@@ -4,11 +4,14 @@ const { Car, User, Comment, } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all posts for dashboard
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
   Car.findAll({
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'created_at'],
+    where: {
+      user_id: req.session.user_id
+    },
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'created_at'],
     include: [
       {
         model: Comment,
@@ -25,8 +28,9 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbCarData => {
-      const car = dbCarData.map(car => car.get({ plain: true }));
+      const cars = dbCarData.map(car => car.get({ plain: true }));
       res.render('dashboard', {
+        cars: cars,
         currentMenu: 'dashboard',
         loggedIn: req.session.loggedIn
       });
