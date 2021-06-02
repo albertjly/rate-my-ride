@@ -1,67 +1,30 @@
 <%- include ('partials/html-head') %>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/">Rate My Ride</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link <%= currentMenu === 'homepage' ? 'active' : '' %>" aria-current="page"
-                href="/">Home</a>
-            </li>
-            <% if(loggedIn) {%>
-              <li class="nav-item">
-                <a class="nav-link <%= currentMenu === 'dashboard' ? 'active' : '' %>" href="/dashboard">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/new-post">Post</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/logout">Log out</a>
-              </li>
-              <% } else { %>
-                <li class="nav-item">
-                  <a class="nav-link" href="/login">Login</a>
+  <%- include ('partials/header-nav') %>
+    <section class="container" id="home-cards">
+      <div class="row justify-content-center align-content-center">
+        <% cars.forEach(car=> { %>
+          <div class="card col-auto col-lg-5 m-3 m-xl-4">
+            <img src="<%= car.image_url %>" class="card-img-top mt-2" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= car.user.username %>'s <%= car.year %>
+                    <%= car.make %>
+                      <%= car.model %>
+              </h5>
+              <p class="card-text">
+                <%= car.description %>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% car.comments.forEach(comment=> { %>
+                <li class="list-group-item">
+                  <%= comment.comment_text %> - <%= comment.user.username %>
                 </li>
-                <% } %>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <section class="container" id="home-cards">
-    <div class="row justify-content-center align-content-center">
-      <% cars.forEach(car=> { %>
-        <div class="card col-auto col-lg-5 m-3 m-xl-4">
-          <img src="<%= car.image_url %>" class="card-img-top mt-2" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">
-              <%= car.user.username %>'s <%= car.year %>
-                  <%= car.make %>
-                    <%= car.model %>
-            </h5>
-            <p class="card-text">
-              <%= car.description %>
-            </p>
+                <% }) %>
+            </ul>
           </div>
-          <ul class="list-group list-group-flush">
-            <% car.comments.forEach(comment=> { %>
-              <li class="list-group-item">
-                <%= comment.comment_text %> - <%= comment.user.username %>
-              </li>
-              <% }) %>
-          </ul>
-        </div>
-        <% }) %>
+          <% }) %>
 
-    </div>
-  </section>
-  <%- include ('partials/footer.ejs') %>
+      </div>
+    </section>
+    <%- include ('partials/footer.ejs') %>
