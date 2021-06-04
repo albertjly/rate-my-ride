@@ -70,8 +70,8 @@
                 <article class="col-md-8">
                   <div class="card-body-top g-0 row justify-content-center flex-column">
                     <div class="card-title g-0 p-2 col d-flex justify-content-between align-items-baseline">
-                      <b class="card-title-username"><%= car.user.username %>  </b>
-                      <b class="card-title-created-at" style="font-size: 1rem">05/20/2021</b>
+                      <b class="card-title-username">Owner: <%= car.user.username %>  </b>
+                      <b class="card-title-created-at" style="font-size: 1rem">Posted at <%= format_date(car.created_at) %> </b>
                       <a href="/dashboard/edit/1" style="color: rgb(195, 140, 140); font-size: 1rem">Edit</a>
                     </div>
                     <div class="car-detail col row">
@@ -95,7 +95,7 @@
                     <p class="comments"><%= comment.comment_text %></p>
                     <div class="d-flex justify-content-between">
                       <span class="username"><%= comment.user.username %> </span>
-                      <span class="created-at"><%= comment.created_at %> </span>
+                      <span class="created-at"><%= format_date(comment.created_at) %> </span>
                     </div>
                     <% }); %> 
                   </div>
