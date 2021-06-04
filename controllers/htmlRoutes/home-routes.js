@@ -66,10 +66,10 @@ router.get('/car/:id', (req, res) => {
         return;
       }
 
-      const post = dbCarData.get({ plain: true });
+      const car = dbCarData.get({ plain: true });
 
       res.render('single-car', {
-        post,
+        car: car,
         loggedIn: req.session.loggedIn
       });
     })

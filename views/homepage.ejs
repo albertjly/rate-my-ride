@@ -4,7 +4,9 @@
       <div class="row justify-content-center align-content-center">
         <% cars.forEach(car=> { %>
           <div class="card col-auto col-lg-5 m-3 m-xl-4">
-            <img src="<%= car.image_url %>" class="card-img-top mt-2" alt="...">
+            <a href="/car/<%= car.id %>">
+              <img src="<%= car.image_url %>" class="card-img-top mt-2" alt="...">
+            </a>
             <div class="card-body">
               <h5 class="card-title">
                 <%= car.user.username %>'s <%= car.year %>
