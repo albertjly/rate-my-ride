@@ -2,7 +2,7 @@
 
 > ## **_Description_**
 
-This is a platform share with others.
+This is a platform for users to share their cars! Users can enter some information on your vehicle, add a picture, and share it with others. Then users can ask questions or just share their thoughts by leaving comments on the posts.
 
 ---
 
