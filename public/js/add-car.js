@@ -6,7 +6,7 @@ async function newFormHandler(event) {
   const model = document.querySelector('input[name="car-model"]').value;
   const year = document.querySelector('input[name="car-year"]').value;
   const color = document.querySelector('input[name="car-color"]').value;
-  const description = document.querySelector('input[name="car-description"]').value;
+  const description = document.querySelector('textarea[name="car-description"]').value;
 
   const response = await fetch(`/api/cars`, {
     method: 'POST',
@@ -24,7 +24,7 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.reload();
+    document.location.replace('/dashboard');
   } else {
     alert(response.statusText);
   }
