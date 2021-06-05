@@ -2,7 +2,7 @@
   <%- include ('partials/header-nav', { currentMenu: 'post' }) %>
 
     <section class="container" id="car-post">
-      <form action="/post">
+      <form class="new-car-form">
         <h2 class="text-center mb-3">Post your Car</h2>
         <div class="row car-detail">
           <div class="col-4 car-detail-left">
@@ -58,4 +58,5 @@
       </form>
     </section>
     <script src="/js/logout.js"></script>
+    <script src="/js/add-car.js"></script>
     <%- include ('partials/footer.ejs'); -%>
