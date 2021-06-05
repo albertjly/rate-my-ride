@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
   console.log('======================');
   Car.findAll({
-    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at'],
     include: [
       {
         model: Comment,
@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at' ],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'user_id', 'created_at'],
     include: [
       {
         model: Comment,
@@ -53,7 +53,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbCarData => {
       if (!dbCarData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No car found with this id' });
         return;
       }
       res.json(dbCarData);
@@ -84,7 +84,12 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Car.update(
     {
-      title: req.body.title
+      image_url: req.body.image_url,
+      make: req.body.make,
+      model: req.body.model,
+      year: req.body.year,
+      color: req.body.color,
+      description: req.body.description
     },
     {
       where: {
@@ -94,7 +99,7 @@ router.put('/:id', withAuth, (req, res) => {
   )
     .then(dbCarData => {
       if (!dbCarData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No car found with this id' });
         return;
       }
       res.json(dbCarData);
@@ -114,7 +119,7 @@ router.delete('/:id', withAuth, (req, res) => {
   })
     .then(dbCarData => {
       if (!dbCarData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No car found with this id' });
         return;
       }
       res.json(dbCarData);
