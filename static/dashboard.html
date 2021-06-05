@@ -47,7 +47,7 @@
 <section id="rmr-contents" class="mt-4">
     <div class="container">
         <div class="row flex-md-column flex-lg-row">
-            <div class="left-filter col col-lg-3">
+            <div class="left-filter col-12 col-xl-3">
                 <div class="card">
                     <article class="card-group-item">
                         <header class="card-header">
@@ -102,17 +102,18 @@
                     </article>
                 </div>
             </div>
-            <ul class="right-contents col col-lg-9 g-0">
-                <li class="card mb-3">
+            <ul class="right-contents col-12 col-xl-9 g-0">
+                <li class="card mb-3 mt-2 p-1">
                     <div class="row g-0 justify-content-between p-1">
-                        <div class="col-md-4 image">
+                        <div class="col-auto col-lg-4 image">
                             <img src="./images/Fiat-Coupe-2022.jpg" alt="...">
                         </div>
-                        <article class="col-md-8">
-                            <div class="card-body-top g-0 row justify-content-center flex-column">
-                                <div class="card-title g-0 p-2 col d-flex justify-content-between">
+                        <article class="col-auto col-lg-8 mb-1 mt-2 mt-lg-0">
+                            <div class="card-body-top px-2 g-0 row justify-content-center flex-column">
+                                <div class="card-title g-0 p-2 col d-flex justify-content-between align-items-baseline">
                                     <b class="card-title-username">Username</b>
                                     <b class="card-title-created-at">05/20/2021</b>
+                                    <a href="/dashboard/edit/1" class="post-edit">Edit</a>
                                 </div>
                                 <div class="car-detail col row">
                                     <ul class="col-4">
@@ -130,18 +131,34 @@
                                 </div>
                             </div>
 
-                            <div class="comment-div p-2 m-1 mb-2">
+                            <div class="comment-div p-2 m-2">
                                 <p class="comments">Comment 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, dolore.</p>
                                 <div class="d-flex justify-content-between">
                                     <span class="username">Albert Jiang</span>
                                     <span class="created-at">Last updated 3 mins ago</span>
                                 </div>
                             </div>
-                            <form class="comment-form row g-0 justify-content-start">
-                                <div class="col-9">
+                            <div class="comment-div p-2 m-2">
+                                <p class="comments">Comment 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, dolore.</p>
+                                <div class="d-flex justify-content-between">
+                                    <span class="username">Albert Jiang</span>
+                                    <span class="created-at">Last updated 3 mins ago</span>
+                                </div>
+                            </div>
+                            <div class="comment-div p-2 m-2">
+                                <p class="comments">Comment 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, dolore.</p>
+                                <div class="d-flex justify-content-between">
+                                    <span class="username">Albert Jiang</span>
+                                    <span class="created-at">Last updated 3 mins ago</span>
+                                </div>
+                            </div>
+                            <form class="comment-form row g-0 mx-2 justify-content-between">
+                                <div class="col-12 col-lg-9">
                                     <input type="text" class="form-control" id="new-comment">
                                 </div>
-                                <button type="submit" class="btn col-2">Comment!</button>
+                                <div class="col-12 col-lg-3 my-2 my-lg-0">
+                                    <button type="submit" class="btn">Comment!</button>
+                                </div>
                             </form>
                         </article>
                     </div>
