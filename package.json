@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "seeds": "node seeds/index.js",
     "heroku-postbuild": "npm run seeds"
   },
@@ -22,6 +22,7 @@
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
     "node": "^16.1.0",
+    "nodemon": "^2.0.7",
     "sequelize": "^5.22.4"
   },
   "repository": {
