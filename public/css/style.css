@@ -6,12 +6,14 @@
   padding: 0;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: #1c1c1c;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -52,6 +54,9 @@ header nav {
 header nav .navbar-brand {
   font-size: 1.6rem;
 }
+header nav .navbar-brand img {
+  height: 3rem;
+}
 
 /********************header-end************************/
 /*******************home-card-start***********************/
@@ -81,24 +86,42 @@ header nav .navbar-brand {
 #rmr-contents .container .row .right-contents .card {
   border: 1px solid #e6e6e6;
   border-radius: 10px;
-  background-color: #F5F5F6;
+  background-color: #f5f5f6;
 }
 #rmr-contents .container .row .right-contents .card .row .image {
-  width: 320px;
+  height: 100%;
   overflow: hidden;
+  border-radius: 1rem;
 }
 #rmr-contents .container .row .right-contents .card .row .image img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  height: 320px;
+  max-height: 20rem;
 }
-#rmr-contents .container .row .right-contents .card .row article {
-  overflow: hidden;
-}
-#rmr-contents .container .row .right-contents .card .row article .card-body-top .card-title {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .card-body-top
+  .card-title {
   background-color: #891515;
   font-size: 1.2rem;
   color: #e6e6e6;
+  border-radius: 0.4rem;
+}
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .card-body-top
+  .card-title
+  .post-edit {
+  color: #c38c8c;
+  font-size: 1rem;
 }
 #rmr-contents .container .row .right-contents .card .row article .comment-div {
   border: 1px solid #cccccc;
@@ -107,39 +130,111 @@ header nav .navbar-brand {
   font-size: 0.8rem;
   box-shadow: 0 0 1px #e44e67;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-div p {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-div
+  p {
   margin-bottom: 0.5rem;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-div .username {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-div
+  .username {
   color: #891515;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-div .created-at {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-div
+  .created-at {
   color: #999999;
 }
 #rmr-contents .container .row .right-contents .card .row article .comment-form {
   margin-top: 0.8rem;
-  height: 2.5rem;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-form .col-9 {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-form
+  .col-9 {
   margin-left: 1rem;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-form input {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-form
+  input {
   background-color: #fefbfb;
   height: 100%;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-form input:focus {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-form
+  input:focus {
   border: 1px solid #fce9ec;
   box-shadow: 0 0 2px 3px #f5c1c1;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-form button {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-form
+  button {
   color: #e6e6e6;
   background-color: #891515;
-  margin-left: 1rem;
+  font-size: 0.9rem;
+  width: 100%;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-form button:active {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-form
+  button:active {
   background-color: #b51c1c;
 }
-#rmr-contents .container .row .right-contents .card .row article .comment-form button:focus {
+#rmr-contents
+  .container
+  .row
+  .right-contents
+  .card
+  .row
+  article
+  .comment-form
+  button:focus {
   box-shadow: 0 0 2px 3px #f5c1c1;
 }
 
@@ -148,10 +243,12 @@ header nav .navbar-brand {
 #car-post .form-group {
   margin-bottom: 0.35rem;
 }
-#car-post .form-group input, #car-post .form-group textarea {
+#car-post .form-group input,
+#car-post .form-group textarea {
   background-color: #fefbfb;
 }
-#car-post .form-group input:focus, #car-post .form-group textarea:focus {
+#car-post .form-group input:focus,
+#car-post .form-group textarea:focus {
   border: 1px solid #fce9ec;
   box-shadow: 0 0 2px 3px #f5c1c1;
 }
@@ -178,14 +275,17 @@ header nav .navbar-brand {
 
 /*********************car-post-end*************************/
 /********************account-start************************/
-.account .container input, .account .container textarea {
+.account .container input,
+.account .container textarea {
   background-color: #fefbfb;
 }
-.account .container input:focus, .account .container textarea:focus {
+.account .container input:focus,
+.account .container textarea:focus {
   border: 1px solid #fce9ec;
   box-shadow: 0 0 2px 3px #f5c1c1;
 }
-.account .container .login img, .account .container .signup img {
+.account .container .login img,
+.account .container .signup img {
   height: 400px;
 }
 
