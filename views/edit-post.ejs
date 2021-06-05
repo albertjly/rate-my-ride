@@ -2,32 +2,32 @@
   <%- include ('partials/header-nav', { currentMenu: 'post' }) %>
 
     <section class="container" id="car-post">
-      <form action="/post">
+      <form action="/post" class="edit-car-form">
         <h2 class="text-center mb-3">Edit your Post</h2>
         <div class="row car-detail">
           <div class="col-4 car-detail-left">
             <div class="form-group row justify-content-between">
               <label class="col-sm-4 col-form-label">Make:</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="" name="car-make">
+                <input type="text" class="form-control" value="<%= cars.make %>" name="car-make">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-form-label">Model:</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="" name="car-model">
+                <input type="text" class="form-control" value="<%= cars.model %>" name="car-model">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-form-label">Year:</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="" name="car-year">
+                <input type="text" class="form-control" value="<%= cars.year %>" name="car-year">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-form-label">Color:</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="" name="car-color">
+                <input type="text" class="form-control" value="<%= cars.color %>" name="car-color">
               </div>
             </div>
           </div>
@@ -35,8 +35,7 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">Description:</label>
               <div class="form col-sm-9">
-                <textarea name="car-description" class="form-control"
-                  placeholder="Please describe your car!"></textarea>
+                <textarea name="car-description" class="form-control"><%= cars.description %></textarea>
               </div>
             </div>
           </div>
@@ -45,12 +44,13 @@
           <div class="col-9 form-group row">
             <label class="col-sm-2 col-form-label">Image Url:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" placeholder="url" name="car-image">
+              <input type="text" class="form-control" value="<%= cars.image_url %>" name="car-image">
             </div>
           </div>
           <div class="col-3 form-group">
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Submit Your Precious</button>
+            <div class="d-flex justify-content-around">
+              <button type="submit" class="btn">Update</button>
+              <button class="btn ml-2 delete-car-btn">Delete</button>
             </div>
           </div>
         </div>
@@ -58,4 +58,6 @@
       </form>
     </section>
     <script src="/js/logout.js"></script>
+    <script src="/js/delete-car.js"></script>
+    <script src="/js/edit-car.js"></script>
     <%- include ('partials/footer.ejs'); -%>

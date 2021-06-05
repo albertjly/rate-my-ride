@@ -6,7 +6,7 @@ async function editFormHandler(event) {
   const model = document.querySelector('input[name="car-model"]').value;
   const year = document.querySelector('input[name="car-year"]').value;
   const color = document.querySelector('input[name="car-color"]').value;
-  const description = document.querySelector('input[name="car-description"]').value;
+  const description = document.querySelector('textarea[name="car-description"]').value;
 
   const car_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
