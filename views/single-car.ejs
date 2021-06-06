@@ -1,0 +1,65 @@
+<%- include ('partials/html-head'); %>
+  <%- include ('partials/header-nav', { currentMenu: 'post' }) %>
+  <section id="rmr-contents" class="mt-4">
+    <div class="container">
+      <div class="row flex-md-column flex-lg-row">
+        <section class="right-contents col col-lg-12 g-0">
+          <article class="card mb-3">
+            <div class="row g-0 justify-content-between p-1">
+              <div class="col-md-4 image">
+                <img src="<%= car.image_url %>" alt="...">
+              </div>
+              
+              <article class="col-md-8">
+                <div class="card-body-top g-0 row justify-content-center flex-column">
+                  <div class="card-title g-0 p-2 col d-flex justify-content-between align-items-baseline">
+                    <b class="card-title-username">Owner: <%= car.user.username %>  </b>
+                    <b class="card-title-created-at" style="font-size: 1rem">Posted at <%= format_date(car.created_at) %> </b>
+                    <a href="/dashboard/edit/1" style="color: rgb(195, 140, 140); font-size: 1rem">Edit</a>
+                  </div>
+                  <div class="car-detail col row">
+                    <ul class="col-4">
+                      <li class="make">Make: <%= car.make %> </li>
+                      <li class="model">Model: <%= car.model %> </li>
+                      <li class="year">Year: <%= car.year %> </li>
+                      <li class="color">Color: <%= car.color %> </li>
+                    </ul>
+                    <div class="description col-8">
+                      <b>Description:</b>
+                      <p>
+                        <%= car.description %> 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comment-div p-2 m-2">
+                  <% car.comments.forEach(comment => { %> 
+                  <p class="comments">
+                    <%= comment.comment_text %>
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <span class="username">
+                      <%= comment.user.username %>
+                    </span>
+                    <span class="created-at">
+                      <%= format_date(comment.created_at) %>
+                    </span>
+                  </div>
+                  <% }); %> 
+                </div>
+                <form class="comment-form row g-0 justify-content-start">
+                  <div class="col-9">
+                    <input type="text" class="form-control" id="new-comment">
+                  </div>
+                  <button type="submit" class="btn col-2">Comment!</button>
+                </form>
+              </article>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </section>
+  <script src="/js/comment.js"></script>
+  <%- include ('partials/footer.ejs'); %>

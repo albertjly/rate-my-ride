@@ -20,6 +20,18 @@ const sess = {
 
 app.use(session(sess));
 
+app.locals.format_date = date => {
+  let minutes = new Date(date).getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  };
+
+  return `${new Date(date).getHours()}:${minutes} on ${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
+    date
+  ).getFullYear()}`;
+}
+
 // set the view engine to ejs
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
