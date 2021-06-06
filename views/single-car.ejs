@@ -33,12 +33,18 @@
                   </div>
                 </div>
 
-                <div class="comment-div p-2 m-1 mb-2">
+                <div class="comment-div p-2 m-2">
                   <% car.comments.forEach(comment => { %> 
-                  <p class="comments"><%= comment.comment_text %></p>
+                  <p class="comments">
+                    <%= comment.comment_text %>
+                  </p>
                   <div class="d-flex justify-content-between">
-                    <span class="username"><%= comment.user.username %> </span>
-                    <span class="created-at"><%= format_date(comment.created_at) %> </span>
+                    <span class="username">
+                      <%= comment.user.username %>
+                    </span>
+                    <span class="created-at">
+                      <%= format_date(comment.created_at) %>
+                    </span>
                   </div>
                   <% }); %> 
                 </div>
