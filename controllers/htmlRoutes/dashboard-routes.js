@@ -43,7 +43,7 @@ router.get('/', withAuth, (req, res) => {
 
 router.get('/edit/:id', (req, res) => {
   Car.findByPk(req.params.id, {
-    attributes: ['id', 'make', 'model', 'year', 'color', 'description', 'created_at'],
+    attributes: ['id', 'image_url', 'make', 'model', 'year', 'color', 'description', 'created_at'],
     include: [
       {
         model: Comment,
@@ -61,10 +61,10 @@ router.get('/edit/:id', (req, res) => {
   })
     .then(dbCarData => {
       if (dbCarData) {
-        const car = dbCarData.get({ plain: true });
+        const cars = dbCarData.get({ plain: true });
 
         res.render('edit-post', {
-          car,
+          cars,
           loggedIn: true,
           currentMenu: 'post'
         });

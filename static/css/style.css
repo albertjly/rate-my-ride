@@ -52,6 +52,9 @@ header nav {
 header nav .navbar-brand {
   font-size: 1.6rem;
 }
+header nav .navbar-brand img {
+  height: 3rem;
+}
 
 /********************header-end************************/
 /*******************home-card-start***********************/
@@ -84,21 +87,22 @@ header nav .navbar-brand {
   background-color: #F5F5F6;
 }
 #rmr-contents .container .row .right-contents .card .row .image {
-  width: 320px;
+  height: 100%;
   overflow: hidden;
+  border-radius: 1rem;
 }
 #rmr-contents .container .row .right-contents .card .row .image img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  height: 320px;
-}
-#rmr-contents .container .row .right-contents .card .row article {
-  overflow: hidden;
+  max-height: 20rem;
 }
 #rmr-contents .container .row .right-contents .card .row article .card-body-top .card-title {
   background-color: #891515;
   font-size: 1.2rem;
   color: #e6e6e6;
+  border-radius: 0.4rem;
+}
+#rmr-contents .container .row .right-contents .card .row article .card-body-top .card-title .post-edit {
+  color: #c38c8c;
+  font-size: 1rem;
 }
 #rmr-contents .container .row .right-contents .card .row article .comment-div {
   border: 1px solid #cccccc;
@@ -118,7 +122,6 @@ header nav .navbar-brand {
 }
 #rmr-contents .container .row .right-contents .card .row article .comment-form {
   margin-top: 0.8rem;
-  height: 2.5rem;
 }
 #rmr-contents .container .row .right-contents .card .row article .comment-form .col-9 {
   margin-left: 1rem;
@@ -134,7 +137,8 @@ header nav .navbar-brand {
 #rmr-contents .container .row .right-contents .card .row article .comment-form button {
   color: #e6e6e6;
   background-color: #891515;
-  margin-left: 1rem;
+  font-size: 0.9rem;
+  width: 100%;
 }
 #rmr-contents .container .row .right-contents .card .row article .comment-form button:active {
   background-color: #b51c1c;

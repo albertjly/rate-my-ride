@@ -59,56 +59,70 @@
               </article>
             </div>
           </div>
-          <ul class="right-contents col col-lg-9 g-0">
-            <% cars.forEach(car => { %> 
-            <li class="card mb-3">
-              <div class="row g-0 justify-content-between p-1">
-                <div class="col-md-4 image">
-                  <img src="<%= car.image_url %>" alt="...">
-                </div>
-                
-                <article class="col-md-8">
-                  <div class="card-body-top g-0 row justify-content-center flex-column">
-                    <div class="card-title g-0 p-2 col d-flex justify-content-between align-items-baseline">
-                      <b class="card-title-username">Owner: <%= car.user.username %>  </b>
-                      <b class="card-title-created-at" style="font-size: 1rem">Posted at <%= format_date(car.created_at) %> </b>
-                      <a href="/dashboard/edit/1" style="color: rgb(195, 140, 140); font-size: 1rem">Edit</a>
-                    </div>
-                    <div class="car-detail col row">
-                      <ul class="col-4">
-                        <li class="make">Make: <%= car.make %> </li>
-                        <li class="model">Model: <%= car.model %> </li>
-                        <li class="year">Year: <%= car.year %> </li>
-                        <li class="color">Color: <%= car.color %> </li>
-                      </ul>
-                      <div class="description col-8">
-                        <b>Description:</b>
-                        <p>
-                          <%= car.description %> 
-                        </p>
+          
+          <ul class="right-contents col-12 col-xl-9 g-0">
+            <% cars.forEach(car=> { %>
+              <li class="card mb-3 mt-2 p-1">
+                <div class="row g-0 justify-content-between p-1">
+                  <div class="col-auto col-lg-4 image">
+                    <img src="<%= car.image_url %>" alt="cars">
+                  </div>
+                  <article class="col-auto col-lg-8 mb-1 mt-2 mt-lg-0">
+                    <div class="card-body-top px-2 g-0 row justify-content-center flex-column">
+                      <div class="card-title g-0 p-2 col d-flex justify-content-between align-items-baseline">
+                        <b class="card-title-username">Owner: 
+                          <%= car.user.username %>
+                        </b>
+                        <b class="card-title-created-at">Posted at
+                          <%= format_date(car.created_at) %>
+                        </b>
+                        <a href="/dashboard/edit/<%= car.id %>" class="post-edit">Edit</a>
+                      </div>
+                      <div class="car-detail col row">
+                        <ul class="col-4 car-detail-left">
+                          <li class="car-make">Make: <%= car.make %>
+                          </li>
+                          <li class="car-model">Model: <%= car.model %>
+                          </li>
+                          <li class="car-year">Year: <%= car.year %>
+                          </li>
+                          <li class="car-color">Color: <%= car.color %>
+                          </li>
+                        </ul>
+                        <div class="car-detail-right col-8">
+                          <b>Description:</b>
+                          <p class="car-description">
+                            <%= car.description %>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                    <% car.comments.forEach(comment=> { %>
+                      <div class="comment-div p-2 m-2">
+                        <p class="comments">
+                          <%= comment.comment_text %>
+                        </p>
+                        <div class="d-flex justify-content-between">
+                          <span class="username">
+                            <%= comment.user.username %>
+                          </span>
+                          <span class="created-at"><%= format_date(comment.created_at) %></span>
+                        </div>
+                      </div>
 
-                  <div class="comment-div p-2 m-1 mb-2">
-                    <% car.comments.forEach(comment => { %> 
-                    <p class="comments"><%= comment.comment_text %></p>
-                    <div class="d-flex justify-content-between">
-                      <span class="username"><%= comment.user.username %> </span>
-                      <span class="created-at"><%= format_date(comment.created_at) %> </span>
-                    </div>
-                    <% }); %> 
-                  </div>
-                  <!-- <form class="comment-form row g-0 justify-content-start">
-                    <div class="col-9">
-                      <input type="text" class="form-control" id="new-comment">
-                    </div>
-                    <button type="submit" class="btn col-2">Comment!</button>
-                  </form> -->
-                </article>
-              </div>
-            </li>
-            <% }); %> 
+                      <% }) %>
+                        <form class="comment-form row g-0 mx-2 justify-content-between">
+                          <div class="col-12 col-lg-9">
+                            <input type="text" class="form-control" id="new-comment">
+                          </div>
+                          <div class="col-12 col-lg-3 my-2 my-lg-0">
+                            <button type="submit" class="btn">Comment!</button>
+                          </div>
+                        </form>
+                  </article>
+                </div>
+              </li>
+              <% }) %>
           </ul>
         </div>
       </div>
